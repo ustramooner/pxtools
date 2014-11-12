@@ -99,6 +99,7 @@ typedef struct {
 #define PX_Field_Type_Logical	0x09
 #define PX_Field_Type_MemoBLOB	0x0c
 #define PX_Field_Type_BinBLOB	0x0d
+#define PX_Field_Type_DUNNO	0x0e
 #define PX_Field_Type_Graphic	0x10
 #define PX_Field_Type_Time	0x14
 #define PX_Field_Type_Timestamp	0x15

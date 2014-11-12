@@ -61,6 +61,7 @@ int create_sql_CREATE(px_header *header, px_fieldInfo **felder)
 		    case PX_Field_Type_Timestamp:	printf("TIMESTAMP"); break;
 		    case PX_Field_Type_Incremental:	printf("INTEGER"); break;
 		    case PX_Field_Type_BCD:		printf("INTEGER"); break;
+		    case PX_Field_Type_DUNNO:	printf("VARCHAR(1)"); break;
 		    default: printf("Unknown: %02x",felder[i]->type); break;
 		}
 
@@ -343,6 +344,12 @@ int create_sql_INSERT(px_header *header, px_fieldInfo **felder, px_records block
 			if (s) free(s);
 			free(qqstr);
 			free(blob);
+		}
+		else if (felder[i]->type == PX_Field_Type_DUNNO)
+		{
+			fwrite("'", 1, 1, stdout);
+			fwrite("?", 1, 1, stdout);
+			fwrite("'", 1, 1, stdout);
 		}
 		else
 		{
