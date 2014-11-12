@@ -429,9 +429,9 @@ char *PXMEMOtoString(void *blob, int size, char *blobname) {
 			return NULL;
 		}
 		
-		if (length != idx.length) {
-			fprintf(stderr, "%s.%d: type 02 blob length doesn't match with BLOB length\n",
-				__FILE__, __LINE__);
+		if ((int)length != (int)idx.length) {
+			fprintf(stderr, "%s.%d: type 02 blob length doesn't match with BLOB length (%d != %d)\n",
+				__FILE__, __LINE__, (int)length, (int)idx.length);
 			return NULL;
 		}
 #if 0
