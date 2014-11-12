@@ -53,7 +53,7 @@ int create_sql_CREATE(px_header *header, px_fieldInfo **felder)
 		    case PX_Field_Type_LongInt:	printf("INTEGER"); break;
 		    case PX_Field_Type_Currency:	printf("DECIMAL"); break;
 		    case PX_Field_Type_Number:	printf("DOUBLE PRECISION"); break;
-		    case PX_Field_Type_MemoBLOB:	printf("BLOB"); break;
+		    case PX_Field_Type_MemoBLOB:	printf("TEXT"); break;
 		    case PX_Field_Type_BinBLOB:	printf("BLOB"); break;
 		    case PX_Field_Type_Graphic:	printf("BLOB"); break;
 		    case PX_Field_Type_Logical:	printf("INTEGER"); break;
