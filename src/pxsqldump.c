@@ -143,6 +143,7 @@ int create_sql_INSERT(px_header *header, px_fieldInfo **felder, px_records block
 				printf("%Ld", d );
 				break;
 			    case VALUE_IS_NULL:
+			    case VALUE_ERROR:
 				printf("NULL");
 				break;
 			    default:
@@ -163,6 +164,7 @@ int create_sql_INSERT(px_header *header, px_fieldInfo **felder, px_records block
 				printf("%Lx", d);
 				break;
 			    case VALUE_IS_NULL:
+			    case VALUE_ERROR:
 				printf("NULL");
 				break;
 			    default:
@@ -182,6 +184,7 @@ int create_sql_INSERT(px_header *header, px_fieldInfo **felder, px_records block
 				printf("%Ld", d );
 				break;
 			    case VALUE_IS_NULL:
+			    case VALUE_ERROR:
 				printf("NULL");
 				break;
 			    default:
@@ -201,6 +204,7 @@ int create_sql_INSERT(px_header *header, px_fieldInfo **felder, px_records block
 				printf("%Ld", d );
 				break;
 			    case VALUE_IS_NULL:
+			    case VALUE_ERROR:
 				printf("NULL");
 				break;
 			    default:
@@ -220,6 +224,7 @@ int create_sql_INSERT(px_header *header, px_fieldInfo **felder, px_records block
 				printf("%f", d );
 				break;
 			    case VALUE_IS_NULL:
+			    case VALUE_ERROR:
 				printf("NULL");
 				break;
 			    default:
@@ -239,6 +244,7 @@ int create_sql_INSERT(px_header *header, px_fieldInfo **felder, px_records block
 				printf("%f", d );
 				break;
 			    case VALUE_IS_NULL:
+			    case VALUE_ERROR:
 				printf("NULL");
 				break;
 			    default:
@@ -258,6 +264,7 @@ int create_sql_INSERT(px_header *header, px_fieldInfo **felder, px_records block
 				printf("'%04i-%02i-%02i'", _tm.tm_year+1900, _tm.tm_mon+1, _tm.tm_mday);
 				break;
 			    case VALUE_IS_NULL:
+			    case VALUE_ERROR:
 				printf("NULL");
 				break;
 			    default:
@@ -278,6 +285,7 @@ int create_sql_INSERT(px_header *header, px_fieldInfo **felder, px_records block
 				printf("'%02d:%02d:%02d'",_tm.tm_hour, _tm.tm_min, _tm.tm_sec);
 				break;
 			    case VALUE_IS_NULL:
+			    case VALUE_ERROR:
 				printf("NULL");
 				break;
 			    default:
@@ -299,6 +307,7 @@ int create_sql_INSERT(px_header *header, px_fieldInfo **felder, px_records block
 				printf("%02d:%02d:%02d'",_tm.tm_hour, _tm.tm_min, _tm.tm_sec);
 				break;
 			    case VALUE_IS_NULL:
+			    case VALUE_ERROR:
 				printf("NULL");
 				break;
 			    default:
