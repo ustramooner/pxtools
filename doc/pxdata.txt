@@ -1,0 +1,42 @@
+Jan Kneschke <jan@kneschke.de>
+
+this document contains the informations that can't be found these two
+documents:
+
+1. pxformat.txt
+> The PARADOX File Structure                         Compiled by Randy Beck
+> ==========================                             bex@compuserve.com
+>                             http://ourworld.compuserve.com/homepages/bex/
+
+2. paradox4.txt
+>                              PARADOX 4.x FILE FORMATS
+>
+>                                     Revision 1
+>                                    May 11, 1996
+>
+>                               Author: Kevin Mitchell
+
+Please refer to those documents for the basic informations about the
+paradox file-format.
+
+Field-types:
+------------
+
+TIMESTAMP
+---------
+64bit-value following the encoding-scheme used for all countable fields. the
+lowest byte is '00'. the rest is a timestamp with a resolution of 1/500
+seconds. zero must somewhere in our history: 120000 years ago.
+
+Paradox 7.x
+-----------
+headersize is 0x1000
+tablesize is 16*0x400
+
+Sort-Order
+----------
+0x5d -> Spanish
+
+Code-pages
+----------
+0x04e4 -> Spain

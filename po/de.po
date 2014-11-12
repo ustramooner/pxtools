@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2003-01-15 22:56+0100\n"
+"PO-Revision-Date: 2002-02-19 10:31CET\n"
+"Last-Translator: Jan Kneschke <jan@kneschke.de>\n"
+"Language-Team: Deutsch <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 0.9.5\n"
+
+#: src/pxinfo.c:19
+msgid "File-Version: "
+msgstr ""
+
+#: src/pxinfo.c:32 src/pxinfo.c:47 src/pxinfo.c:63 src/pxinfo.c:71
+#: src/pxinfo.c:86
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#: src/pxinfo.c:35
+msgid "Filetype: "
+msgstr "Dateityp:"
+
+#: src/pxinfo.c:38
+msgid "indexed .DB"
+msgstr "indizierte .DB"
+
+#: src/pxinfo.c:39
+msgid "primary index .PX"
+msgstr "Primärindex .PX"
+
+#: src/pxinfo.c:40
+msgid "non indexed .DB"
+msgstr "nicht indizierte .DB"
+
+#: src/pxinfo.c:41
+msgid "non-incrementing secondary index .Xnn"
+msgstr "nicht-inkrementierender Sekundärindex .Xnn"
+
+#: src/pxinfo.c:42
+msgid "secondary index .Ynn (inc/non-inc)"
+msgstr "Sekundärindex .Ynn (inc/non-inc)"
+
+#: src/pxinfo.c:43
+msgid "incrementing secondary index .Xnn"
+msgstr "inkrementierender Sekundärindex .Xnn"
+
+#: src/pxinfo.c:44
+msgid "non-incrementing secondary index .XGn"
+msgstr "nicht-inkrementierender Sekundärindex .XGn"
+
+#: src/pxinfo.c:45
+msgid "secondary index .YGn (inc/non-inc)"
+msgstr "Sekundärindex .YGn (inc/non-inc)"
+
+#: src/pxinfo.c:46
+msgid "incrementing secondary index .XGn"
+msgstr "inkrementierender Sekundärindex .XGn"
+
+#: src/pxinfo.c:51
+msgid "Tablename:"
+msgstr "Tabellenname:"
+
+#: src/pxinfo.c:53
+msgid "Sort-Order:"
+msgstr "Sortierreihenfolge:"
+
+#: src/pxinfo.c:56
+msgid "ASCII"
+msgstr "ASCII"
+
+#: src/pxinfo.c:57
+msgid "International"
+msgstr "International"
+
+#: src/pxinfo.c:59
+msgid "Norwegian/Danish"
+msgstr "Norwegisch/Dänisch"
+
+#: src/pxinfo.c:60
+msgid "Swedish/Finnish"
+msgstr "Schwedisch/Finnisch"
+
+#: src/pxinfo.c:61
+msgid "Spanish"
+msgstr "Spanisch"
+
+#: src/pxinfo.c:62
+msgid "PDX ANSI intl"
+msgstr "PDX ANSI intl"
+
+#: src/pxinfo.c:66
+msgid "Write-Protection:"
+msgstr "Schreibschutz:"
+
+#: src/pxinfo.c:69
+msgid "off"
+msgstr "aus"
+
+#: src/pxinfo.c:70
+msgid "on"
+msgstr "an"
+
+#: src/pxinfo.c:81
+msgid "Codepage:"
+msgstr "Codeseite:"
+
+#: src/pxinfo.c:84
+msgid "United States"
+msgstr "Vereinigte Staaten"
+
+#: src/pxinfo.c:85
+msgid "Spain"
+msgstr "Spanien"

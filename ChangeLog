@@ -1,0 +1,75 @@
+0.0.20-
+  + getopt_long is available on GNU-systems only
+0.0.19 -
+  + added support for GRAPHIC and BLOB
+  + added type 02 blob handling
+0.0.18 - 
+  + seperated stderr from stdout in pxcsvdump (Thomas Ledoux)
+  + added incremental-type to pxcsvdump (Thomas Ledoux)
+  + fixed MEMO-handling in pxcsvdump for short MEMOs (reported by
+    <msilver@prl.ab.ca>)
+0.0.17 - 09.06.2002 11:20
+  + added gettext support - jan kneschke
+  + added long config-options - emmanuel saracco <esaracco@easter-eggs.com>
+  + backslashes are now escape with a backslash - Thomas Apel
+  + fixed negative double's -  Pauline Middelink
+0.0.16 - 24.01.2002 10:42
+  + fixed reading of fieldnames from tables of paradox 3.5 (reported 
+    by <mike@skib.ru>)
+  + fixed compilation on system which require O_BINARY (various reports)
+  + quotation postgres <ktanzer@desc.org>, <esaracco@easter-eggs.com>
+  + a new switch for suppressing the CREATE statements <ktanzer@desc.org>
+0.0.15 - 15.08.2001 23:37
+  + fixed a bug for small databases discovered by Stefan King
+    <stefank2@yahoo.com>
+0.0.14 - 14.07.2001 16:44
+  + added support for database specific output <michael.heca@email.cz>
+  + added support for TIME <michael.heca@email.cz>
+  + added a alarm message if a required BLOB-file isn't specified.
+  + fixed a bug in the TIME/TIMESTAMP/DATE conversion, reported by
+    <mneto@argo.com.br>
+0.0.13 - 2001-06-22
+  + updated autoconf, automake
+  + fixed a bug in the memoblob code (Deniss Gaplevsky)
+  + added pxxmldump
+  + added MEMO-BLOB support to pxcsvdump
+0.0.12 - 21.09.2000
+  + added support for INCREMENTAL <mans@gyptis.frmug.org>
+  + MemoBLOB support
+0.0.11 - 05.07.2000
+  + fixed the fix again
+0.0.10 - 04.07.2000
+  + fixed the DATE again (2 letter dates)
+0.0.9 - 03.07.2000
+  + fixed DATE for dates before 1970.
+0.0.8 - 10.06.2000
+  + added longint to the list of valid datatypes for pxsqldump, pxcsvdump
+0.0.7 - 20.05.2000
+  + the header detection was a little bit too strict. if the firstblock is
+    not equal '1' a warning is issued, but the file gets parsed.
+0.0.6 - 03.01.2000
+  + fixed quotations
+  + changed DOUBLE -> DOUBLE PRECISION for PostgreSQL
+    (fix prodived by <thomas.baumann@ch.tum.de>)
+0.0.5 - 06.12.1999
+  + fixed big-endian support
+  + added NULL for all field-types
+  + fixed precission of TIMESTAMP
+  + added Spain to SortOrder and CodePage
+0.0.4 - 01.12.1999
+  + added big-endian support 
+  + added field-type MEMO-BLOB
+  + fixed NULL for TIMESTAMP and LOGICAL
+    (data-file provided by <melgue@correoargentino.com.ar>)
+0.0.3 - 26.11.1999
+  + added field-types TIMESTAMP and LOGICAL
+    (data-file provided by <tg@channel-one.de>)
+  + added pxcsvdump
+0.0.2 - 10.10.1999
+  + Y2K-workaround 
+    if a date is before 1970 onehundred years are added.
+    look in pxconvert.c:PXtoTM(...) or grep for 'Y2K' if you don't want it
+  + implemented correct reading of data-blocks
+  + added basic support for index-files
+0.0.1 - 03.10.1999
+  + first release

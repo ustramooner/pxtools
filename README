@@ -1,0 +1,65 @@
+The pxtools are a set of tools to convert a Paradox-database into a
+SQL-database. 
+
+The current version can be found at 
+http://www.kneschke.de/projekte/paradox/
+mailto:jan@kneschke.de
+
+pxTools
+=======
+
+pxinfo
+------
+dumps the basic infomations of the given paradox-file.
+
+pxsqldump
+---------
+Parses the Paradox-database and dump the corresponding SQL-strings (CREATE
+TABLE and INSERT INTO) on stdout.
+
+use -n to overwrite the tablename.
+use -f to specify the filename of t
+
+pxcsvdump
+---------
+Parses the Paradox-database and dump the corresponding CSV-strings on
+stdout.
+
+use -n to overwrite the tablename.
+
+
+
+Supported Field Types
+=====================
+Currently the following field-types are recognized:
+ALPHA
+DATE
+SHORTINT
+LONGINT
+CURRENCY
+NUMBER
+LOGICAL
+TIMESTAMP
+MEMOBLOB
+
+the rest is currenly not supported. mail me if you need more.
+
+Problems
+========
+
+Y2K
+---
+Paradox-files are NOT Y2K-safe. Currently there is a workarund for this bug
+in pxconvert.c that adds 100 years if the date is before 1.1.1970.
+
+Index-files
+-----------
+The information you get out of the index-files by pxsqldump is not rellay
+usefull. It all the data it can find, but the header is currently parsed
+wrong. Anyway these index-files are not needed to convert a paradox-database
+into a SQL-database. (PRIMARY KEY and FOREIGN KEY can't be detected yet.)
+
+TIMESTAMP
+---------
+The field-type TIMESTAMP returned by pxsqldump has a precission of 
++/- 1 second. 

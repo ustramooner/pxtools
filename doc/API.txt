@@ -1,0 +1,50 @@
+The pxtools provide a API for Paradox-files. It is implemented by pxparse.c
+and pxconvert.c.
+
+pxparse.c
+---------
+
+px_fieldInfo**  PXparseCompleteHeader (int fd, px_header *header);
+DESCIPTION
+	PXparseCompleteHeader parses the header of the paradox-file that is
+	specified by the filedescriptor fd. 
+RETURN VALUE
+	PXparseCompleteHeader returns the field-info and the header or NULL
+	on error.
+
+px_blocks**     PXparseBlocks (int fd, px_header *header);
+DESCIPTION
+	PXparseBlocks parses datafields of the paradox-file that is
+	specified by the filedesciptor fd according to the informations from
+	header.
+RETURN VALUE
+	PXparseBlocks returns the blocks or NULL on error.
+
+pxconvert.c
+-----------
+
+These functions convert the Paradox-specific integers into 
+!!! litte-endian !!!-intergers.
+
+SHORTINT -> short
+LONGINT  -> long
+DOUBLE   -> double
+	unsigned long   PXtoLong(long number, int type);
+	double  PXtoDouble(long long number, int type);
+
+TIMESTAMP -> struct tm
+DATE -> struct tm
+TIME -> struct tm
+	int     PXtoTM (long number, struct tm **tm, int type);
+
+ALPHA -> quoted-VARCHAR
+int     PXtoQuotedString(char *dst, const unsigned char *src, int type);
+
+replaces ' ' by '_' (used for table-names)
+char *  PXNametoQuotedName(char *str);
+
+
+Example:
+--------
+
+look in pxinfo.c.

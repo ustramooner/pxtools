@@ -1,0 +1,1 @@
+EXTRA_DIST = pxformat.txt paradox4.txt API.txt pxdata.txt

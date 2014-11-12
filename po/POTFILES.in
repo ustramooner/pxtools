@@ -1,0 +1,6 @@
+src/pxconvert.c
+src/pxcsvdump.c
+src/pxinfo.c
+src/pxparse.c
+src/pxsqldump.c
+src/pxxmldump.c
