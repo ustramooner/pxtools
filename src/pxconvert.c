@@ -220,7 +220,7 @@ int PXtoTM (unsigned long long number, struct tm *tm, int type ) {
 			** if the date is before 1.1.1970 i add 100 years (365*100 + 24)
 			** (seem not to be valid for paradox 7.0)
 			*/
-#ifdef Y2K_WORKAROUND			
+#if Y2K_WORKAROUND
 			if (retval < 719528) {
 				retval += 36524;
 			}
