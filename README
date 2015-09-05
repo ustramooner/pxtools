@@ -1,9 +1,11 @@
 The pxtools are a set of tools to convert a Paradox-database into a
 SQL-database. 
 
-The current version can be found at 
-http://www.kneschke.de/projekte/paradox/
-mailto:jan@kneschke.de
+This is a fork of https://github.com/ustramooner/pxtools, which is
+derived from the original pxtools, which used to be found at
+http://www.kneschke.de/projekte/paradox/ (it is now a 404).
+
+Original author: mailto:jan@kneschke.de
 
 pxTools
 =======
