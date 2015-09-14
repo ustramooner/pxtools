@@ -1,3 +1,0 @@
-#undef Y2K_WORKAROUND
-#undef HAVE_GETOPT_H
-#undef HAVE_GETOPT_LONG

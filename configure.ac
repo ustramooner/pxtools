@@ -1,15 +1,23 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT
+AC_INIT([pxtools], [0.0.21])
 AC_CONFIG_SRCDIR([src/pxparse.c])
-AM_CONFIG_HEADER(config.h)
-AM_INIT_AUTOMAKE(pxtools,0.0.20)
+AC_CONFIG_HEADERS([config.h])
+AC_USE_SYSTEM_EXTENSIONS
+AM_INIT_AUTOMAKE([foreign dist-bzip2])
 
 AM_MAINTAINER_MODE
+AM_SILENT_RULES([yes])
 
 dnl Checks for programs.
 AC_PROG_CC
 AC_PROG_MAKE_SET
 AC_PROG_INSTALL
+
+AM_GNU_GETTEXT([external])
+AC_SUBST(INTLINC)
+AC_SUBST(INTLLIBS)
+
+AC_USE_SYSTEM_EXTENSIONS
 
 dnl Checks for libraries.
 
@@ -23,36 +31,21 @@ AC_C_BIGENDIAN
 AC_STRUCT_TM
 
 ALL_LINGUAS="de"
-AM_GNU_GETTEXT
-
-if test "x$USE_INCLUDED_LIBINTL" = "xyes"; then
-        INTLINC='-I$(top_srcdir)/intl'
-fi
-AC_SUBST(INTLINC)
-AC_SUBST(INTLLIBS)
 
 AC_ARG_ENABLE(y2k,
   [  --enable-y2k            enables a Y2k workaround for paradox < 7.0],
   [case "${enableval}" in
-	yes) y2k=true;;
-	no) y2k=false;;
+	yes) y2k=1;;
+	no) y2k=0;;
 	*) AC_MSG_ERROR(bad value ${enableval} for --enable-y2k) ;;
 esac],
-[y2k=false]
+[y2k=0]
 )
+AC_DEFINE_UNQUOTED(Y2K_WORKAROUND, [$y2k],
+    [Whether to enable the paradox < 7.0 Y2K workaround or not])
 
-if test x$y2k = xtrue ; then
-	AC_DEFINE(Y2K_WORKAROUND)
-fi
-
-AC_CHECK_HEADER(getopt.h, HAVE_GETOPT=true, HAVE_GETOPT=false)
-if test "x$HAVE_GETOPT" = "xtrue"; then
-        AC_CHECK_LIB(c, getopt_long, HAVE_GETOPT=true, HAVE_GETOPT=false)
-	if test "x$HAVE_GETOPT" = "xtrue"; then
-	        AC_DEFINE(HAVE_GETOPT_LONG)
-	fi
-	AC_DEFINE(HAVE_GETOPT_H)
-fi
+AC_CHECK_HEADERS([getopt.h])
+AC_CHECK_FUNCS([getopt_long])
 
 localedir='${datadir}/locale'
 AC_SUBST(localedir)
@@ -60,10 +53,10 @@ AC_SUBST(localedir)
 dnl Checks for library functions.
 
 AC_CONFIG_FILES([
-	src/Makefile 
-	doc/Makefile 
-	po/Makefile.in
-	Makefile 
+	src/Makefile
+	doc/Makefile
+	po/Makefile
+	Makefile
 	pxtools.spec
 	])
 AC_OUTPUT
