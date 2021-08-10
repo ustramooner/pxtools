@@ -165,7 +165,7 @@ px_fieldInfo **PXparseCompleteHeader (int fd, px_header *header) {
 	char unp_head[0x58];
 	char unp_head4[0x20];
 	unsigned char d[2];
-	void *ptr;
+	char ptr[4];
 	
 	int i;
 	char c;
